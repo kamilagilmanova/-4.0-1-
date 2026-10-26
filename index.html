@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eee9df" />
+    <title>Врата — архив артефактов</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <main>
+        <section class="intro">
+          <div class="intro-main">
+            <div>
+              <h1>Язык <em>Врат.</em></h1>
+              <p class="intro-description">
+                Начните расшифровку древнего артефакта.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="artifact-section"
+          aria-label="Интерфейс расшифровки Врат"
+        >
+          <div class="gate-wrapper" id="gate">
+            <img
+              src="ФОН-День-1.png"
+              alt="Древние каменные Врата с тремя символами"
+              class="gate-bg"
+            />
+
+            <div class="scene-vignette" aria-hidden="true"></div>
+
+            <div class="scene-corner corner-tl"></div>
+            <div class="scene-corner corner-tr"></div>
+            <div class="scene-corner corner-bl"></div>
+            <div class="scene-corner corner-br"></div>
+
+            <div class="scan-beam" aria-hidden="true"></div>
+
+            <div class="gate-label gate-label-left">
+              <span class="label-index">01</span>
+              <span>ОБЪЕКТ</span>
+            </div>
+
+            <div class="gate-label gate-label-right">
+              <span class="label-index">UNKNOWN</span>
+              <span>ПРОИСХОЖДЕНИЕ</span>
+            </div>
+
+            <div class="final-message" id="final-message" aria-live="polite">
+              <span class="final-overline">ПЕРЕВОД ЗАВЕРШЁН</span>
+              <span class="final-text">Ты всё <em>сможешь.</em></span>
+              <span class="final-note">Послание расшифровано   03/03</span>
+            </div>
+
+            <div class="glyph-container" id="slot-1" data-index="01">
+              <span class="word-hint">Ты</span>
+              <img src="1-glyph.svg" alt="Первый символ" class="glyph-svg" />
+            </div>
+
+            <div class="glyph-container" id="slot-2" data-index="02">
+              <span class="word-hint">всё</span>
+              <img src="2-glyph.svg" alt="Второй символ" class="glyph-svg" />
+            </div>
+
+            <div class="glyph-container" id="slot-3" data-index="03">
+              <span class="word-hint">сможешь</span>
+              <img
+                src="Копия 3-glyph.svg"
+                alt="Третий символ"
+                class="glyph-svg"
+              />
+            </div>
+
+            <div class="scene-bottomline">
+              <span>АРТЕФАКТ</span>
+              <span class="scene-bottom-status">
+                <span class="status-dot"></span>
+                <span id="scene-status">ОЖИДАНИЕ СКАНИРОВАНИЯ</span>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="control-panel" aria-label="Управление сканированием">
+          <div class="scan-info">
+            <div class="progress-copy">
+              <span id="progress-label">Ожидание запуска</span>
+              <span class="progress-count" id="progress-count">00 / 03</span>
+            </div>
+
+            <div
+              class="progress-track"
+              role="progressbar"
+              aria-label="Прогресс сканирования"
+              aria-valuemin="0"
+              aria-valuemax="3"
+              aria-valuenow="0"
+              id="progress-track"
+            >
+              <span class="progress-fill" id="progress-fill"></span>
+            </div>
+          </div>
+
+          <button class="scan-btn" id="start-scan-btn" type="button">
+            <span id="button-label">Начать расшифровку</span>
+
+            <svg
+              class="button-arrow"
+              aria-hidden="true"
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2 4.92999L17.45 9.15999C18.79 10.5 19.45 11.16 19.45 11.99C19.45 12.82 18.79 13.49 17.45 14.82L13.21 19.07M4.29004 12H19.13"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F3EEE4"
+              />
+            </svg>
+          </button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
