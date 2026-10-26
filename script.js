@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slots = [
     document.getElementById("slot-1"),
     document.getElementById("slot-2"),
-    document.getElementById("slot-3")
+    document.getElementById("slot-3"),
   ];
 
   const SCAN_TIME = 1400;
@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const percentage = (completed / slots.length) * 100;
 
     progressFill.style.width = `${percentage}%`;
-    progressCount.textContent =
-      `${String(completed).padStart(2, "0")} / 03`;
+    progressCount.textContent = `${String(completed).padStart(2, "0")} / 03`;
 
     progressTrack.setAttribute("aria-valuenow", String(completed));
 
@@ -91,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     await wait(450);
 
     finalMessage.classList.add("visible");
+    gate.classList.add("is-complete");
 
     document.querySelector(".intro").classList.add("is-hidden");
 
