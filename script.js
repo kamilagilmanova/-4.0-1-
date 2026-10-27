@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const scanButton = document.getElementById("start-scan-btn");
   const buttonLabel = document.getElementById("button-label");
-
   const gate = document.getElementById("gate");
   const finalMessage = document.getElementById("final-message");
   const sceneStatus = document.getElementById("scene-status");
-
   const progressLabel = document.getElementById("progress-label");
   const progressCount = document.getElementById("progress-count");
   const progressFill = document.getElementById("progress-fill");

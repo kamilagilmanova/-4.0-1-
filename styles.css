@@ -513,7 +513,10 @@ h1 em {
 }
 
 .intro {
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s;
 }
 
 .intro.is-hidden {
@@ -676,32 +679,31 @@ h1 em {
     font-size: 6px;
   }
 
-  
-.gate-wrapper {
-  aspect-ratio: 16 / 9;
-}
+  .gate-wrapper {
+    aspect-ratio: 16 / 9;
+  }
 
-.gate-bg {
-  object-fit: cover;
-  object-position: center;
-}
+  .gate-bg {
+    object-fit: cover;
+    object-position: center;
+  }
 
-.glyph-container {
-  width: clamp(24px, 6.2%, 58px);
-  top: 50%;
-}
+  .glyph-container {
+    width: clamp(24px, 6.2%, 58px);
+    top: 50%;
+  }
 
-#slot-1 {
-  left: 40.5%;
-}
+  #slot-1 {
+    left: 40.5%;
+  }
 
-#slot-2 {
-  left: 50%;
-}
+  #slot-2 {
+    left: 50%;
+  }
 
-#slot-3 {
-  left: 59.5%;
-}
+  #slot-3 {
+    left: 59.5%;
+  }
 
   .word-hint {
     bottom: calc(100% + 8px);
